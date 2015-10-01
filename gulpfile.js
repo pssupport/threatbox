@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     stylus = require('gulp-stylus'),
     sourcemaps = require('gulp-sourcemaps'),
+    rigger = require('gulp-rigger'),
     cssmin = require('gulp-minify-css'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
@@ -76,6 +77,7 @@ gulp.task('twig', function () {
 
 gulp.task('js:build', function () {
     gulp.src(path.src.js)
+        .pipe(rigger())
         .pipe(sourcemaps.init())
         .pipe(uglify())
         .pipe(sourcemaps.write())

@@ -1,0 +1,168 @@
+.main {
+  width: 100%;
+  height: 100%;
+  background url("../../img/main_bg.jpg") center center no-repeat #1a2329;
+  position: relative;
+  text-align: center;
+  &__container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 74px 0 0 0;
+  }
+  &_page {
+    width: 100%;
+    height: 100%;
+  }
+  &__logo {
+    width: 64px;
+    height: 64px;
+    background url("../../img/logo_large.png");
+
+    margin: 0 auto;
+  }
+  &__logo_type {
+    width: 430px;
+    height: 28px;
+    background url("../../img/logo_type_large.png");
+
+    margin: 18px auto 25px;
+  }
+    &__info {
+      font-size 16px;
+      color: #ffffff;
+      line-height 28px;
+
+    }
+  &__btn {
+    font-size 32px;
+    color: #fff;
+    padding: 17.5px 76px
+    margin: 98px 0 0 2px
+  }
+    &__btn_text {
+      font-size 14px;
+      color: rgba(255, 255, 255, .5);
+      padding 11px 0 0 0
+    }
+  &__footer {
+    position relative;
+    max-width: 1280px;
+    margin: 164px auto 0;
+    &:after {
+      content: ''
+      position absolute
+      left 0
+      bottom: 0
+      height: 5px;
+      width: 100%;
+      background url("../../img/main_border_bottom.jpg")
+    }
+  }
+
+    .footer__item-wrapper {
+      font-size 0;
+      position relative
+      padding 36px 0 0 0
+      &:before {
+        content ''
+        position absolute
+        left: 0
+        top: 0
+        width: 100%;
+        height: 33px;
+        background url("../../img/line.png")
+      }
+    }
+  .footer__title {
+    font-size 44px;
+    color: #ffffff
+    font-weight 300
+  }
+
+    .footer__item {
+      display: inline-block
+      vertical-align top
+      width: 12.5%
+      font-size 44px;
+      font-weight 300
+
+
+    }
+}
+
+  .footer__item {
+    position relative
+    min-height 91px;
+    span {
+      position: absolute;
+      left: 50%;
+      top: 48px;
+      font-size: 16px;
+      font-weight: 400;
+      width: 100%;
+      transform: translateX(-50%);
+    }
+  }
+    .color_1 {
+      color: #eb361a
+    }
+
+    .color_2 {
+      color: #ca4e19
+    }
+
+.color_3 {
+  color: #c46416
+}
+
+.color_4 {
+  color: #ffa015
+}
+
+.color_5 {
+  color: #ffc41a
+}
+.color_6 {
+  color: #75bd3f
+}
+.color_7 {
+  color: #3bba9f
+}
+.color_8 {
+  color: #0089b0
+}
+
+  .logo__wrapper {
+    transition: all 200ms ease;
+  }
+  .main.processing {
+    .logo__wrapper {
+      transform scale(.7)
+    }
+      .main__info {
+        font-size 32px;
+        font-weight 300
+        & span {
+          font-size 14px
+          color rgba(255,255,255,.5)
+          display: block
+        }
+      }
+        .main__btn_text {
+          display: none
+        }
+  }
+
+
+.loader {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -25px 0 0 -175px;
+  -webkit-filter: url(#goo);
+}
+
+  .svg_blur {
+    display: none
+  }
