@@ -6,14 +6,6 @@
 {% endblock %}
 
 {% block content %}
-    <div class="loader">
-        <div class="loader__item"></div>
-        <div class="loader__item"></div>
-        <div class="loader__item"></div>
-        <div class="loader__item"></div>
-        <div class="loader__item"></div>
-    </div>
-
     <div class="main">
         <div class="main__container">
             <div class="logo__wrapper">
@@ -23,7 +15,29 @@
             <div class="main__info">
                 Submit a file you find a suspicious. <br>Bot-Trek Threatbox will scan it and report back its findings.
             </div>
-            <div id="svg_btn" class="btn main__btn js-main">Upload file</div>
+
+            <div class="upload-scene">
+                <div id="svg_btn" class="btn main__btn js-main">Upload file</div>
+                <div class="loader">
+                    <div class="loader__wrapper">
+                        <div class="loader__item"></div>
+                        <div class="loader__item"></div>
+                        <div class="loader__item"></div>
+                        <div class="loader__item"></div>
+                        <div class="loader__item"></div>
+                    </div>
+                </div>
+
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" height="0" width="0">
+                    <defs>
+                        <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="12" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -10" result="goo" />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+
             <div class="main__btn_text">or drag and drop it on this greyish area</div>
 
         </div>
@@ -75,20 +89,6 @@
             <div class="preloader__item"></div>
         </div>
     </div>
-
-
-
-
-
-    <svg class="svg_blur" xmlns="http://www.w3.org/2000/svg" version="1.1">
-        <defs>
-            <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-                <feBlend in="SourceGraphic" in2="goo" />
-            </filter>
-        </defs>
-    </svg>
 {% endblock %}
 
 {% block footer %}
