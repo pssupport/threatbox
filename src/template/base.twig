@@ -5,19 +5,22 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/css/main.css">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=1170">
+
 </head>
 <body>
-
-{% block header %}
-    {% include "../template/common/header.twig" %}
-{% endblock %}
-
-<div id="content" class="{{ content_class }}">
-    {% block content %}
-
+<div class="page {{ page__class }}">
+    {% block header %}
+        {% include "../template/common/header.twig" %}
     {% endblock %}
-</div>
 
+    <div id="content" class="{{ content_class }}">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+    <div id="push"> </div>
+</div>
 {% block footer %}
     {% include "../template/common/footer.twig" %}
 {% endblock %}

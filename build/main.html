@@ -5,13 +5,15 @@
     <title></title>
     <link rel="stylesheet" href="/css/main.css">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=1170">
+
 </head>
 <body>
-
-
-
-<div id="content" class="main_page">
+<div class="page page__main">
     
+
+    <div id="content" class="main_page">
+        
     <div class="loader">
         <div class="loader__item"></div>
         <div class="loader__item"></div>
@@ -29,7 +31,7 @@
             <div class="main__info">
                 Submit a file you find a suspicious. <br>Bot-Trek Threatbox will scan it and report back its findings.
             </div>
-            <div class="btn main__btn js-main">Upload file</div>
+            <div id="svg_btn" class="btn main__btn js-main">Upload file</div>
             <div class="main__btn_text">or drag and drop it on this greyish area</div>
 
         </div>
@@ -84,19 +86,6 @@
 
 
 
-    <svg class="loader" width="500" height="350" viewBox="0 0 500 350" style="display: block">
-        <circle id="main__circle" r="20" cx="120" cy="150" fill="tomato" />
-        <circle id="circle" r="20" cx="100" cy="100" fill="tomato" />
-
-        <animateMotion
-                xlink:href="#circle"
-                dur="1s"
-                begin="click"
-                fill="freeze"
-                repeatCount="indefinite"
-                path="M2.599999999999998,30.2a30.2,30.2 0 1,0 60.4,0a30.2,30.2 0 1,0 -60.4,0"
-                />
-    </svg>
 
 
     <svg class="svg_blur" xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -108,8 +97,9 @@
             </filter>
         </defs>
     </svg>
+    </div>
+    <div id="push"> </div>
 </div>
-
 
 
 <script src="/js/main.js"></script>
