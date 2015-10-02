@@ -57,19 +57,29 @@
                 letter-spacing: -0.4px;
               }
                 &__row {
-                  padding: 0 0 0 30px
+                  width: 450px
+                  display inline-block
+                  //padding: 0 0 0 30px
                 }
 }
 
   .table__row {
     font-size: 0;
+    background: rgba(140, 145, 148, 0.05)
+    border-radius 3px
+    border: 1px solid #eaeaea
+    margin: 0 16px
+    &:last-child {
+      margin: 0 0 0 16px
+    }
     .table__string {
-      width: 50%;
+      width: 100%;
       display: inline-block;
       vertical-align top
     }
     .string__table {
       width: 23%;
+      min-width auto;
       vertical-align top
     }
       .string__item {
