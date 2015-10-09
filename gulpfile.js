@@ -21,14 +21,16 @@ var path = {
         js: 'build/js/',
         css: 'build/css/',
         img: 'build/img/',
-        fonts: 'build/fonts/'
+        fonts: 'build/fonts/',
+        favicon: 'build/'
     },
     src: {
         html: 'src/**/*.twig',
         js: 'src/js/main.js',
         style: 'src/style/main.styl',
         img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
+        fonts: 'src/fonts/**/*.*',
+        favicon: 'src/favicon.*'
     },
     watch: {
         html: 'src/**/*.twig',
@@ -102,6 +104,9 @@ gulp.task('style:build', function () {
 });
 
 gulp.task('image:build', function () {
+    gulp.src(path.src.favicon)
+        .pipe(gulp.dest(path.build.favicon));
+        
     gulp.src(path.src.img)
         .pipe(imagemin({
             progressive: true,
