@@ -12,6 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "normalize.css": "*",
-    "jquery": "2.*"
+    "jquery": "2.*",
+    "baron": "~0.7.13"
   }
 }

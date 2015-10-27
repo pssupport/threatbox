@@ -73,8 +73,8 @@ gulp.task('twig', function () {
                 ]
             }
         }*/))
-        .pipe(gulp.dest(path.build.html))
-        .pipe(reload({stream: true}));
+        .pipe(gulp.dest(path.build.html));
+        //.pipe(reload({stream: true}));
 });
 
 gulp.task('js:build', function () {
