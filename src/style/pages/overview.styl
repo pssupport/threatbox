@@ -126,14 +126,13 @@
   text-align left
   box-shadow 0 0 30px 10px rgba(#000, 0.2)
   z-index 100
-  margin-left -25px
   left 1000%
-  opacity 0
-  transition opacity 0.33s ease, left 0s ease 0.33s
+  margin-left 0
+  transition margin-left 0.33s ease, left 0s ease 0.33s
   &.show{
-    left 50%
-    opacity 1
-    transition opacity 0.33s ease
+    left 100%
+    margin-left -(@width)
+    transition margin-left 0.33s ease
   }
   &__close{
     display block
